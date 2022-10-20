@@ -14,11 +14,13 @@ html {
   --accent-color: #2196f3;
   --primary-white-color: #fff;
   --secondary-background-color: #2f303a;
+  --hero-background-color: #c4c4c4;
   --accent-color-logo: #000;
   --grey-background-color: #f5f4fa;
   --address-list-rgba: rgba(255, 255, 255, 0.6);
   --line-header-color: #ececec;
   --frame-portfolio-color: #eee;
+  --primari-icon-color: #afb1b8;
 }
 /*a {
     text-decoration: none;
@@ -81,6 +83,8 @@ body {
 .site-nav .link {
   color: var(--title-text-color);
 }
+.auth-nav-icon {
+}
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
@@ -98,9 +102,14 @@ body {
   color: var(--primary-text-color);
 }
 
+.auth-nav-icon {
+  margin-right: 10px;
+}
+
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
+  --primary-text-color: var(--accent-color);
 }
 
 .site-nav .link.current {
@@ -128,7 +137,7 @@ body {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--secondary-background-color);
+  background-color: var(--hero-background-color);
   text-align: center;
 }
 
@@ -145,6 +154,21 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+.tumb {
+  width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/img-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Кнопка */
@@ -190,6 +214,15 @@ body {
 .advantage-list li {
   width: 270px;
 }
+.advantage-tumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--grey-background-color);
+}
 .section-title.advantage {
   margin-top: 0;
   margin-bottom: 10px;
@@ -204,7 +237,8 @@ body {
   justify-content: space-between;
 }
 .section-title.activity,
-.section-title.command {
+.section-title.command,
+.section-title.client {
   margin-top: 0;
   margin-bottom: 50px;
 
@@ -227,10 +261,12 @@ img {
   background-color: var(--primary-white-color);
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .title-command {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 .section-title.command-name {
   margin-top: 0;
@@ -245,6 +281,26 @@ img {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+}
+.list-social-network {
+  display: flex;
+  padding: 0;
+  margin-bottom: 30px;
+  justify-content: center;
+  gap: 10px;
+}
+.list-social-network > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.list-social-network > a:hover {
+  background-color: var(--accent-color);
+  --primari-icon-color: var(--primary-white-color);
 }
 /* portfolio */
 .filter-portfolio {
