@@ -302,6 +302,20 @@ img {
   background-color: var(--accent-color);
   --primari-icon-color: var(--primary-white-color);
 }
+/* Наши клиенти*/
+.client-list {
+  display: flex;
+  justify-content: space-between;
+}
+.client-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--primari-icon-color);
+  border-radius: 4px;
+}
 /* portfolio */
 .filter-portfolio {
   display: flex;
