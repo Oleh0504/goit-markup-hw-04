@@ -21,6 +21,7 @@ html {
   --line-header-color: #ececec;
   --frame-portfolio-color: #eee;
   --primari-icon-color: #afb1b8;
+  --footer-social-background-color: rgba(255, 255, 255, 0.1);
 }
 /*a {
     text-decoration: none;
@@ -282,14 +283,14 @@ img {
   line-height: 1.19;
   text-align: center;
 }
-.list-social-network {
+.social-network {
   display: flex;
   padding: 0;
   margin-bottom: 30px;
   justify-content: center;
   gap: 10px;
 }
-.list-social-network > a {
+.social-network > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,7 +299,8 @@ img {
   height: 44px;
   border-radius: 50%;
 }
-.list-social-network > a:hover {
+.social-network > a:hover,
+.social-network > a:focus {
   background-color: var(--accent-color);
   --primari-icon-color: var(--primary-white-color);
 }
@@ -307,7 +309,7 @@ img {
   display: flex;
   justify-content: space-between;
 }
-.client-item {
+.client-item > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,6 +317,11 @@ img {
   height: 92px;
   border: 1px solid var(--primari-icon-color);
   border-radius: 4px;
+}
+.client-item:hover,
+.client-item:focus {
+  border: 1px solid var(--accent-color);
+  --primari-icon-color: var(--accent-color);
 }
 /* portfolio */
 .filter-portfolio {
@@ -386,6 +393,9 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.container.container-footer {
+  display: flex;
+}
 .logo-accent-footer {
   display: inline-block;
 
@@ -394,6 +404,7 @@ img {
 .address-list {
   display: flex;
   flex-direction: column;
+  min-width: 231px;
 }
 .address-list li:not(:last-child) {
   margin-bottom: 9px;
@@ -421,7 +432,34 @@ img {
 .item-tel .link:focus {
   color: var(--accent-color);
 }
+.section-social-network {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 70px;
+}
+.list-social-network {
+  display: flex;
+}
+.list-social-network a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--footer-social-background-color);
+}
+.section-title.title-social-network {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  line-height: 1.15;
+  text-transform: uppercase;
 
+  color: var(--primary-white-color);
+}
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
